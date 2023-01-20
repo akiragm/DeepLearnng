@@ -17,10 +17,10 @@ from dataset import ptb
 
 
 # ハイパーパラメータの設定
-window_size = 2
+window_size = 6
 hidden_size = 100
-batch_size = 5024
-max_epoch = 1
+batch_size = 256
+max_epoch = 5
 
 # データの読み込み
 corpus, word_to_id, id_to_word = ptb.load_data('train')

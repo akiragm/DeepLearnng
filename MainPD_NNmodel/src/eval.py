@@ -21,7 +21,7 @@ for query in querys:
 
 # analogy task
 print('-'*50)
-analogy('king', 'man', 'queen',  word_to_id, id_to_word, word_vecs)
+analogy('y5@cs-we063', 'branch', 'y4@cs-vr06g',  word_to_id, id_to_word, word_vecs)
 analogy('take', 'took', 'go',  word_to_id, id_to_word, word_vecs)
 analogy('car', 'cars', 'child',  word_to_id, id_to_word, word_vecs)
 analogy('good', 'better', 'bad',  word_to_id, id_to_word, word_vecs)

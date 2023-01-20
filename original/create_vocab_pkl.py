@@ -12,7 +12,7 @@ import pickle
 
 
 ##読み込み用データの作成
-f = open('FBPD_text.txt', 'r', encoding="utf-8")
+f = open('MainPD.txt', 'r', encoding="utf-8")
 text = f.read()
 f.close()
 

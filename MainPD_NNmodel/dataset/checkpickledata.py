@@ -9,6 +9,4 @@ with (open("ptb.vocab.pkl", "rb")) as openfile:
 
 
 
-word_to_id =  openfile
-
-word_to_id[0]
+print(openfile)
