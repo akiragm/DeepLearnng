@@ -32,7 +32,7 @@ if config.GPU:
 
 # モデルなどの生成
 model = CBOW(vocab_size, hidden_size, window_size, corpus)
-#model = SkipGram(vocab_size, hidden_size, window_size, corpus)
+# model = SkipGram(vocab_size, hidden_size, window_size, corpus)
 optimizer = Adam()
 trainer = Trainer(model, optimizer)
 
@@ -48,8 +48,6 @@ params = {}
 params['word_vecs'] = word_vecs.astype(np.float16)
 params['word_to_id'] = word_to_id
 params['id_to_word'] = id_to_word
-pkl_file = 'cbow_params.pkl'
-# or
-#pkl_file = 'skipgram_params.pkl'
+pkl_file = 'cbow_params.pkl'  # or 'skipgram_params.pkl'
 with open(pkl_file, 'wb') as f:
     pickle.dump(params, f, -1)

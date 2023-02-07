@@ -20,13 +20,13 @@ f.close()
 ##コーパス作成
 corpus, word_to_id, id_to_word = preprocess(text)
 params = {}
-params= id_to_word
 params= word_to_id 
+params= id_to_word
 params= corpus
 
 #pickle作成
 pkl_file = 'ptb.vocab.pkl'
 with open(pkl_file, 'wb') as f:
  #  pickle.dump(params, f, -1)
-  pickle.dump((id_to_word,word_to_id), f)
+  pickle.dump((word_to_id,id_to_word), f)
 

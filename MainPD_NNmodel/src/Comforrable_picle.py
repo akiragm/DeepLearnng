@@ -1,21 +1,24 @@
 import pickle
 import numpy as np
 objects = []
-pkl_file = 'ptb.vocab_moto.pkl'
+pkl_file = 'ptb.vocab.pkl'
+pkl_file0 = 'ptb.vocab_moto.pkl'
 pkl_file1 = 'skipgram_params.pkl'
 pkl_file2 = 'cbow_params.pkl'
+pkl_file3 = 'cbow_params_moto.pkl'
 
-##with (open(pkl_file, "rb")) as f:
-##    params = pickle.load(f)
-##print(params[0])
 
-with (open(pkl_file2, "rb")) as f2:
-    params = pickle.load(f2)
-    word_vecs = params['word_vecs']
-    word_to_id = params['word_to_id']
-    id_to_word = params['id_to_word']
+with (open(pkl_file, "rb")) as f:
+    params = pickle.load(f)
+print(params[0])
 
-print(word_to_id)
+#with (open(pkl_file3, "rb")) as f2:
+#    params = pickle.load(f2)
+#    word_vecs = params['word_vecs']
+#    word_to_id = params['word_to_id']
+#    id_to_word = params['id_to_word']
+#
+#print(word_to_id)
 ##
 ##n=0
 ##
