@@ -3,7 +3,8 @@ import sys
 sys.path.append('..')
 import os
 from common.np import *
-
+import re
+from collections import Counter
 
 def preprocess(text):
     text = text.lower()
@@ -20,6 +21,27 @@ def preprocess(text):
 
     corpus = np.array([word_to_id[w] for w in words])
 
+    return corpus, word_to_id, id_to_word
+
+
+def preprocess2(text):
+    
+    # ステップ2: テキストデータのクリーニング
+    text = re.sub(r'[^\w\s]','',text)
+    text = text.lower()
+    
+    # ステップ3: テキストデータを単語に分割
+    words = text.split()
+    
+    # ステップ4: ボキャブラリーの作成
+    word_counts = Counter(words)
+    sorted_vocab = sorted(word_counts, key=word_counts.get, reverse=True)
+    word_to_id = {word: ii for ii, word in enumerate(sorted_vocab)}
+    id_to_word = {ii: word for word, ii in word_to_id.items()}
+    
+    # ステップ5: コーパスをID化
+    corpus = [word_to_id[word] for word in words]
+    
     return corpus, word_to_id, id_to_word
 
 

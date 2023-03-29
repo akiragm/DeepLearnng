@@ -1,12 +1,13 @@
 import pickle
 import numpy as np
 objects = []
+pkl_file00 = 'ptb.vocabNEW.pkl'
 pkl_file0 = 'ptb.vocab.pkl'
 pkl_file = 'ptb.vocab_moto.pkl'
 pkl_file1 = 'skipgram_params.pkl'
 pkl_file2 = 'cbow_params.pkl'
 
-with (open(pkl_file, "rb")) as f:
+with (open(pkl_file0, "rb")) as f:
     params = pickle.load(f)
 print(params[0])
 

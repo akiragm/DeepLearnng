@@ -1,7 +1,7 @@
 import pickle
 import numpy as np
 objects = []
-pkl_file = 'ptb.vocab_moto.pkl'
+pkl_file = 'C:\Git\DeepLearnng\makecorpus\ptb.vocab.pkl'
 pkl_file1 = 'skipgram_params.pkl'
 pkl_file2 = 'cbow_params.pkl'
 
