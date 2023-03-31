@@ -11,7 +11,7 @@ from common.util import preprocess2
 import pickle
 
 
-path = 'C:\Git\DeepLearnng\detatxt\mainPD.txt'
+path = 'C:\Git\DeepLearnng\detatxt\mainPD_modulePD.txt'
 pkl_file ='C:\Git\DeepLearnng\pklファイル\ptb.vocab.pkl'
 ##読み込み用データの作成
 f = open(path, 'r', encoding="utf-8")
