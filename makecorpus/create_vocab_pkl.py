@@ -10,7 +10,7 @@ from common.util import preprocess
 import pickle
 
 
-path = 'D:\Git\DeepLearnng\detatxt\mainPD.txt'
+path = 'C:\Git\DeepLearnng\makecorpus\mainPD_modulePD_TEST .txt'
 
 ##読み込み用データの作成
 f = open(path, 'r', encoding="utf-8")
