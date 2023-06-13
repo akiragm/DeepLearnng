@@ -4,7 +4,7 @@ sys.path.append('..')
 from common import config
 # GPUで実行する場合は、下記のコメントアウトを消去（要cupy）
 # ===============================================
-# config.GPU = True
+#config.GPU = True
 # ===============================================
 from common.np import *
 import pickle
@@ -17,8 +17,8 @@ from dataset import ptb
 
 
 # ハイパーパラメータの設定
-window_size = 5
-hidden_size = 100
+window_size = 2
+hidden_size = 1000
 batch_size = 100
 max_epoch = 10
 
@@ -32,7 +32,7 @@ if config.GPU:
 
 # モデルなどの生成
 model = CBOW(vocab_size, hidden_size, window_size, corpus)
-# model = SkipGram(vocab_size, hidden_size, window_size, corpus)
+#model = SkipGram(vocab_size, hidden_size, window_size, corpus)
 optimizer = Adam()
 trainer = Trainer(model, optimizer)
 
